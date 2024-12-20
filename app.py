@@ -17,15 +17,15 @@ def predict():
     P=request.args.get('P')
     P=float(P)
     K=request.args.get('K')
-    K=Float(K)
+    K=float(K)
     T=request.args.get('T')
-    T=Float(T)
+    T=float(T)
     H=request.args.get('H')
-    H=Float(H)
+    H=float(H)
     PH=request.args.get('PH')
-    PH=Float(PH)
+    PH=float(PH)
     R=request.args.get('R')
-    R=Float(R)
+    R=float(R)
     data=[[N,P,K,T,H,PH,R]]
     response=ai.predict(data)[0]
     return response
@@ -34,4 +34,4 @@ def predict():
         api.run(
             host='0.0.0.0',
             port=2000
-        )
+        ) 
